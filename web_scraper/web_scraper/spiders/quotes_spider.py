@@ -48,3 +48,13 @@ class QuotesSpider(scrapy.Spider):
             print(f"Error extracting byline: {e}")
         finally:
             driver.quit()
+        
+        # Save the response body to an HTML file
+        page = response.url.split("/")[-2]
+        filename = f"article-{page}.html"
+        with open(filename, "wb") as f:
+            f.write(response.body)
+        self.log(f"Saved file {filename}")
+        
+        
+        
