@@ -14,6 +14,7 @@ NEWSPIDER_MODULE = "web_scraper.spiders"
 
 ADDONS = {}
 
+LOG_ENABLED = False
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "web_scraper (+http://www.yourdomain.com)"
